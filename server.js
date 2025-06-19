@@ -13,10 +13,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
+app.use('/uploads', express.static('uploads'));
 
 // Middleware CORS
 app.use(cors({
-  origin: 'http://localhost:4200', // Autorisez votre frontend Angular
+  origin: 'https://hotel-frontend1-c4fyb1sza-devsaliougs-projects.vercel.app/', // Autorisez votre frontend Angular
+ // origin: 'http://localhost:4200', // Autorisez votre frontend Angular
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
