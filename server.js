@@ -50,7 +50,7 @@ mongoose.connect(process.env.MONGODB_URI, {
       } else {
         logger.warn('Collection "hotels" non trouvée. Création...');
         // Forcer la création de la collection
-        Hotel.createCollection();
+        //Hotel.createCollection();
       }
     });
 })
